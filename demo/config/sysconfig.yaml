@@ -1,0 +1,15 @@
+directories:
+  data: ~/DEMO_DATA
+  logs: ~/DEMO_DATA/logs
+  images: ~/DEMO_DATA/images
+  ingest: ~/.cache/open-radar-data
+
+logging-settings:
+  # Select: DEBUG, INFO, WARNING, ERROR, or CRITICAL
+  log_level: ERROR
+  # Select: FILE, TERMINAL, BOTH, or NONE
+  output_level: NONE
+  # Select: DEBUG, INFO, WARNING, ERROR, or CRITICAL
+  system_log_level: ERROR
+  # Select: FILE, TERMINAL, BOTH, or NONE
+  system_output_level: NONE

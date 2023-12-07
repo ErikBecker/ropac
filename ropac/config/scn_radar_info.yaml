@@ -1,0 +1,445 @@
+quantity_mapping:
+  Rain: 'RATE' 
+  Zh: 'DBZH' 
+  V: 'VRADH' 
+  Zdr: 'ZDR'
+  Kdp: 'KDP'
+  PhiDP: 'PHIDP' 
+  RhoHV: 'RHOHV'
+  W: 'WRADH' 
+  QI: 'QIND'
+
+gain:
+  Rain: 0.01
+  Zh: 0.01
+  V: 0.01
+  Zdr: 0.01 
+  Kdp: 0.01
+  PhiDP: 0.005493247882810712   #360./65535
+  RhoHV: 3.051850947599719e-05  #2./65534
+  W: 0.01 
+  QI: 1.0
+
+offset:
+  Rain: -327.68
+  Zh: -327.68
+  V: -327.68 
+  Zdr: -327.68
+  Kdp: -327.68 
+  PhiDP: -180.00274662394142     #-32768*(360./65535)
+  RhoHV: -3.051850947599719e-05  #-1*(2./65534)
+  W: -0.01
+  QI: 0.0
+
+undetect: 
+  Rain: 0. 
+  Zh: 0. 
+  V: 0. 
+  Zdr: 0.
+  Kdp: 0. 
+  PhiDP: 0.
+  RhoHV: 0. 
+  W: 0.
+  QI: 0.
+
+nodata: 
+  Rain: 0.
+  Zh: 0.
+  V: 0. 
+  Zdr: 0.
+  Kdp: 0. 
+  PhiDP: 0.
+  RhoHV: 0. 
+  W: 0.
+  QI: 0.
+
+pulse_settings: # PRF-PulseNo.  prf_pattern: 1 + pulse_set: 7
+    WR2120:
+        1-1:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 0.5  # Non-modulation pulse width [μs]
+            shortpulse_range: 3.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 20.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 4.  # Modulation pulse width [MHz] 
+            highprf: 2000  # PRF1 [Hz]
+            lowprf: 1600  # PRF2 [Hz]
+            rscale: 75 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: High # PRF
+        1-2: 
+            stoprange: 30.  # RX [km]
+            pulsewidth: 1.  # Non-modulation pulse width [μs]
+            shortpulse_range: 4.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 30.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 2000  # PRF1 [Hz]
+            lowprf: 1600  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: High # PRF
+        1-3:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 6.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 40.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1700  # PRF1 [Hz]
+            lowprf: 1360  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: Mid # PRF
+        1-4:
+            stoprange: 70.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1300  # PRF1 [Hz]
+            lowprf: 1040  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: Low # PRF
+        1-5:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1600  # PRF1 [Hz]
+            lowprf: 1280  # PRF2 [Hz]
+            rscale: 75/150 Mix* # Range Resolution [m] *check scn header for the correct data
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Mid # PRF
+        1-6:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 4.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 30.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 2000  # PRF1 [Hz]
+            lowprf: 1600  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: High  # Sensitivity
+            prf_qualuty: High # PRF
+        1-7:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 6.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 40.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1700  # PRF1 [Hz]
+            lowprf: 1360  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Mid # PRF
+        1-8:
+            stoprange: 70.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1300  # PRF1 [Hz]
+            lowprf: 1040  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Low # PRF
+        2-1:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 0.5  # Non-modulation pulse width [μs]
+            shortpulse_range: 3.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 20.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 4.  # Modulation pulse width [MHz] 
+            highprf: 1900  # PRF1 [Hz]
+            lowprf: 1520  # PRF2 [Hz]
+            rscale: 75 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: High # PRF
+        2-2:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 4.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 30.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1850  # PRF1 [Hz]
+            lowprf: 1480  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: High # PRF
+        2-3: 
+            stoprange: 50.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 6.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 40.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1575  # PRF1 [Hz]
+            lowprf: 1260  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: Mid # PRF
+        2-4:
+            stoprange: 70.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1200  # PRF1 [Hz]
+            lowprf: 960  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: Low # PRF
+        2-5:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1450  # PRF1 [Hz]
+            lowprf: 1160  # PRF2 [Hz]
+            rscale: 75/150 Mix* # Range Resolution [m] *check scn header for the correct data
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Mid # PRF
+        2-6:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 4.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 30.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1850  # PRF1 [Hz]
+            lowprf: 1480  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: High  # Sensitivity
+            prf_qualuty: High # PRF
+        2-7:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 6.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 40.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1575  # PRF1 [Hz]
+            lowprf: 1260  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Mid # PRF
+        2-8:
+            stoprange: 70.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1200  # PRF1 [Hz]
+            lowprf: 960  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Low # PRF
+        3-1:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 0.5  # Non-modulation pulse width [μs]
+            shortpulse_range: 3.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 20.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 4.  # Modulation pulse width [MHz] 
+            highprf: 1825  # PRF1 [Hz]
+            lowprf: 1460  # PRF2 [Hz]
+            rscale: 75 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: High # PRF
+        3-2:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 4.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 30.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1750  # PRF1 [Hz]
+            lowprf: 1400  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: High # PRF
+        3-3:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 6.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 40.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1475  # PRF1 [Hz]
+            lowprf: 1180  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: Mid # PRF
+        3-4:
+            stoprange: 70.  # RX [km]
+            pulsewidth: 1.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1200  # PRF1 [Hz]
+            lowprf: 900  # PRF2 [Hz]
+            rscale: 150 # Range Resolution [m]
+            sensitivity: Low  # Sensitivity
+            prf_qualuty: Low # PRF
+        3-5:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.  # Modulation pulse width [MHz] 
+            highprf: 1350  # PRF1 [Hz]
+            lowprf: 1080  # PRF2 [Hz]
+            rscale: 75/150 Mix* # Range Resolution [m] *check scn header for the correct data
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Mid # PRF
+        3-6:
+            stoprange: 30.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 4.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 30.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1750  # PRF1 [Hz]
+            lowprf: 1400  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: High  # Sensitivity
+            prf_qualuty: High # PRF
+        3-7:
+            stoprange: 50.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 6.3  # Short pulse range [km]
+            mod_pulsewidth_mus: 40.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1475  # PRF1 [Hz]
+            lowprf: 1180  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Mid # PRF
+        3-8:
+            stoprange: 70.  # RX [km]
+            pulsewidth: 2.0  # Non-modulation pulse width [μs]
+            shortpulse_range: 7.8  # Short pulse range [km]
+            mod_pulsewidth_mus: 50.  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 1.  # Modulation pulse width [MHz] 
+            highprf: 1180  # PRF1 [Hz]
+            lowprf: 900  # PRF2 [Hz]
+            rscale: 300 # Range Resolution [m]
+            sensitivity: Mid  # Sensitivity
+            prf_qualuty: Low # PRF
+    WR2100:
+        1:
+            pulse_type: 1
+            stoprange: 30.  # Observation Range [km]
+            non_modulation_method: Q0N # Modulation Method
+            pulsewidth: 50 # Pulse width [us]
+            non_mod_pulsewidth_mhz: 4.04  # Modulation Bandwidth [MHz]
+            modulation_method:  # Modulation Method
+            mod_pulsewidth_mus:  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz:  # Modulation pulse width [MHz] 
+            highprf: 1300  # PRF1 [Hz]
+            lowprf: 1040  # PRF2 [Hz]
+        2: 
+            pulse_type: 1
+            stoprange: 50.  # Observation Range [km]
+            non_modulation_method: Q0N # Modulation Method
+            pulsewidth: 50 # Pulse width [us]
+            non_mod_pulsewidth_mhz: 3.03  # Modulation Bandwidth [MHz]
+            modulation_method:  # Modulation Method
+            mod_pulsewidth_mus:  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz:  # Modulation pulse width [MHz] 
+            highprf: 1300  # PRF1 [Hz]
+            lowprf: 1040  # PRF2 [Hz]
+        3: 
+            pulse_type: 1
+            stoprange: 50.  # Observation Range [km]
+            non_modulation_method: Q0N # Modulation Method
+            pulsewidth: 50 # Pulse width [us]
+            non_mod_pulsewidth_mhz: 2.  # Modulation Bandwidth [MHz]
+            modulation_method:  # Modulation Method
+            mod_pulsewidth_mus:  # Modulation pulse width [μs]
+            mod_pulsewidth_mhz:  # Modulation pulse width [MHz] 
+            highprf: 1300  # PRF1 [Hz]
+            lowprf: 1040  # PRF2 [Hz]
+        4: 
+            pulse_type: 2
+            stoprange: 30.  # Observation Range [km]
+            non_modulation_method: P0N # Modulation Method
+            pulsewidth: 0.5 # Pulse width [us]
+            non_mod_pulsewidth_mhz:  # Modulation Bandwidth [MHz]
+            modulation_method: Q0N # Modulation Method
+            mod_pulsewidth_mus: 50. # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 4.04 # Modulation pulse width [MHz] 
+            highprf: 1000  # PRF1 [Hz]
+            lowprf: 800  # PRF2 [Hz]
+        5: 
+            pulse_type: 2
+            stoprange: 50.  # Observation Range [km]
+            non_modulation_method: P0N # Modulation Method
+            pulsewidth: 0.66 # Pulse width [us]
+            non_mod_pulsewidth_mhz:  # Modulation Bandwidth [MHz]
+            modulation_method: Q0N # Modulation Method
+            mod_pulsewidth_mus: 50. # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 3.03 # Modulation pulse width [MHz] 
+            highprf: 1000  # PRF1 [Hz]
+            lowprf: 800  # PRF2 [Hz]
+        6: 
+            pulse_type: 2
+            stoprange: 50.  # Observation Range [km]
+            non_modulation_method: P0N # Modulation Method
+            pulsewidth: 1.0 # Pulse width [us]
+            non_mod_pulsewidth_mhz:  # Modulation Bandwidth [MHz]
+            modulation_method: Q0N # Modulation Method
+            mod_pulsewidth_mus: 50. # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.0 # Modulation pulse width [MHz] 
+            highprf: 1000  # PRF1 [Hz]
+            lowprf: 800  # PRF2 [Hz]
+        7: 
+            pulse_type: 2
+            stoprange: 30.  # Observation Range [km]
+            non_modulation_method: P0N # Modulation Method
+            pulsewidth: 0.5 # Pulse width [us]
+            non_mod_pulsewidth_mhz:  # Modulation Bandwidth [MHz]
+            modulation_method: Q0N # Modulation Method
+            mod_pulsewidth_mus: 20. # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 4.04 # Modulation pulse width [MHz] 
+            highprf: 1000  # PRF1 [Hz]
+            lowprf: 800  # PRF2 [Hz]
+        8: 
+            pulse_type: 2
+            stoprange: 50.  # Observation Range [km]
+            non_modulation_method: P0N # Modulation Method
+            pulsewidth: 0.66 # Pulse width [us]
+            non_mod_pulsewidth_mhz:  # Modulation Bandwidth [MHz]
+            modulation_method: Q0N # Modulation Method
+            mod_pulsewidth_mus: 20. # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 3.03 # Modulation pulse width [MHz] 
+            highprf: 1000  # PRF1 [Hz]
+            lowprf: 800  # PRF2 [Hz]
+        9: 
+            pulse_type: 2
+            stoprange: 50.  # Observation Range [km]
+            non_modulation_method: P0N # Modulation Method
+            pulsewidth: 1.0 # Pulse width [us]
+            non_mod_pulsewidth_mhz:  # Modulation Bandwidth [MHz]
+            modulation_method: Q0N # Modulation Method
+            mod_pulsewidth_mus: 20. # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.0 # Modulation pulse width [MHz] 
+            highprf: 1000  # PRF1 [Hz]
+            lowprf: 800  # PRF2 [Hz]
+        10:
+            pulse_type: 2
+            stoprange: 70.  # Observation Range [km]
+            non_modulation_method: P0N # Modulation Method
+            pulsewidth: 1.0 # Pulse width [us]
+            non_mod_pulsewidth_mhz:  # Modulation Bandwidth [MHz]
+            modulation_method: Q0N # Modulation Method
+            mod_pulsewidth_mus: 50. # Modulation pulse width [μs]
+            mod_pulsewidth_mhz: 2.0 # Modulation pulse width [MHz] 
+            highprf: 1000  # PRF1 [Hz]
+            lowprf: 800  # PRF2 [Hz]
+    NONE:
+        1:
+            pulsewidth: NA # Pulse width [us]
+
+
+
+
+
+
+
+
+
+

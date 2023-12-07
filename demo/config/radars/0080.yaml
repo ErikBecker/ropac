@@ -1,0 +1,21 @@
+# Required
+name: '0080' # name of radar from file, must match config yaml file name
+id: 001 # your unique id number
+override_azoffset: False
+Azimuth_Offset: 0.0
+system: Furuno
+type: Furuno
+wavelength: 3.18
+beamwH: 2.77 #[deg]
+beamwV: 2.78 #[deg]
+antgainH: None #[dB]
+antgainV: None #[dB]
+poltype: simultaneous-dual
+gasattn: 0.010 #[dB/km]
+RXgainH: None #[dB]
+RXgainV: None #[dB]
+
+# Optional: Can add any vairable of ODIM specific metadata as [name: value]
+var_name: your_value
+
+

@@ -1,0 +1,424 @@
+
+reflectivity:
+  missing: "#222222"
+  underflow: "#000000"
+  overflow: "#ffffff"
+  mode: gradient
+  value_min: -32.0
+  value_max:  60.0
+  colours: 
+    - "#000000"
+    - "#400080" 
+    - "#440087"
+    - "#48008f" 
+    - "#4c0097" 
+    - "#50009f" 
+    - "#5400a7" 
+    - "#5800af" 
+    - "#5c00b7" 
+    - "#6000bf" 
+    - "#6400c7" 
+    - "#6800cf" 
+    - "#6c00d7" 
+    - "#7000df" 
+    - "#7400e7" 
+    - "#7800ef" 
+    - "#7c00f7" 
+    - "#8000ff" 
+    - "#7800ff" 
+    - "#7000ff" 
+    - "#6800ff" 
+    - "#6000ff" 
+    - "#5800ff" 
+    - "#5000ff" 
+    - "#4800ff" 
+    - "#4000ff" 
+    - "#3800ff" 
+    - "#3000ff" 
+    - "#2800ff" 
+    - "#2000ff" 
+    - "#1800ff" 
+    - "#1000ff" 
+    - "#0800ff" 
+    - "#0000ff" 
+    - "#0011ff" 
+    - "#0022ff" 
+    - "#0033ff" 
+    - "#0044ff" 
+    - "#0055ff" 
+    - "#0066ff" 
+    - "#0077ff" 
+    - "#0088ff" 
+    - "#0099ff" 
+    - "#00aaff" 
+    - "#00bbff" 
+    - "#00ccff" 
+    - "#00ddff" 
+    - "#00eeff" 
+    - "#00ffff" 
+    - "#00ffe5" 
+    - "#00ffcc" 
+    - "#00ffb2" 
+    - "#00ff99" 
+    - "#00ff7f" 
+    - "#00ff66" 
+    - "#00ff4c" 
+    - "#00ff33" 
+    - "#00ff19" 
+    - "#00ff00" 
+    - "#19ff00" 
+    - "#33ff00" 
+    - "#4cff00" 
+    - "#66ff00" 
+    - "#7fff00" 
+    - "#99ff00" 
+    - "#b2ff00" 
+    - "#ccff00" 
+    - "#e5ff00" 
+    - "#ffff00" 
+    - "#ffe500" 
+    - "#ffcc00" 
+    - "#ffb200" 
+    - "#ff9900" 
+    - "#ff7f00" 
+    - "#ff6600" 
+    - "#ff4c00" 
+    - "#ff3300" 
+    - "#ff1900" 
+    - "#ff0000" 
+    - "#ffffff"
+    
+cyan:
+  missing: "#ffffff"
+  underflow: "#000000"
+  overflow: "#00ffff"
+  mode: gradient
+  value_min: 0.0
+  value_max: 4.0
+  colours:
+    - "#000000"
+    - "#00ffff"
+    
+
+greyscale:
+  missing: "#ffffff"
+  underflow: "#000000"
+  overflow: "#ffffff"
+  mode: gradient
+  value_min: 0.0
+  value_max: 100.0
+  colours: 
+    - "#000000"
+    - "#ffffff"
+    
+
+jet:
+  missing: "#222222"
+  underflow: "#00007f"
+  overflow: "#800000"
+  mode: gradient
+  value_min: 0.0
+  value_max: 50.0
+  colours":   
+    - "#00007f" 
+    - "#0000e5" 
+    - "#0047ff" 
+    - "#00b3ff"
+    - "#15ffe8" 
+    - "#81ff7d" 
+    - "#e2ff1b" 
+    - "#ffb400"
+    - "#ffd400" 
+    - "#e10000" 
+    - "#800000" 
+    
+KDP:
+  missing: "#222222"
+  underflow: "#757575"
+  overflow: "#8f501d"
+  mode: gradient
+  value_min: -2.0
+  value_max: 7.0
+  colours: 
+    - "#757575"
+    - "#757575"
+    - "#4c4c4c"
+    - "#4c4c4c"
+    - "#411003"
+    - "#411003"
+    - "#631c21"
+    - "#b7545d"
+    - "#cf7fb4"
+    - "#8a5679"
+    - "#8e81b2"
+    - "#615878"
+    - "#a2f9f7"
+    - "#6da7a7"
+    - "#69b340"
+    - "#69b340"
+    - "#90f939"
+    - "#90f939"
+    - "#fdfd3d"
+    - "#a2a227"
+    - "#e17f2d"
+    - "#8f501d"
+
+PhiDP:
+  missing: "#222222"
+  underflow: "#ffffff"
+  overflow: "#ffffff"
+  mode: gradient
+  value_min: 0.0
+  value_max: 360.0
+  colours: 
+    - "#0000ff" 
+    - "#00ffff" 
+    - "#00ff00" 
+    - "#ffff00"
+    - "#ff0000" 
+    - "#ff00ff" 
+    - "#0000ff" 
+    - "#00ffff"
+    - "#00ff00" 
+    - "#ffff00" 
+    - "#ff0000" 
+    - "#ff00ff"
+    - "#0000ff" 
+    
+RhoHV:
+  missing: "#222222"
+  underflow: "#000000"
+  overflow: "#802756"
+  value_min: 0.0
+  value_max: 1.0
+  mode: gradient
+  colours: 
+    - "#000000" 
+    - "#1d1e88" 
+    - "#1a1cad"
+    - "#191cd3"
+    - "#3836d3" 
+    - "#8786d2" 
+    - "#a0f864"
+    - "#a0ca2f"
+    - "#fdf83c" 
+    - "#e48f29" 
+    - "#d9491f"
+    - "#892611"
+    - "#802756" 
+    - "#802756" 
+  values: 
+    - 0.000
+    - 0.450
+    - 0.550
+    - 0.650
+    - 0.700
+    - 0.799
+    - 0.800
+    - 0.899
+    - 0.900
+    - 0.959
+    - 0.960
+    - 0.980
+    - 0.990
+    - 1.000
+    
+SpWidth:
+  missing: "#222222"
+  underflow: "#000000"
+  overflow: "#ffffff"
+  mode: gradient
+  value_min: 0.0
+  value_max: 15.0
+  colours:
+    - "#483d8b"
+    - "#061b6d"
+    - "#34941f"
+    - "#ffff00"
+    - "#ffa200"
+    - "#ff1700"
+    - "#de00eb"    
+  values: 
+    - 0.0
+    - 2.2
+    - 4.0
+    - 6.7
+    - 9.0
+    - 11.5
+    - 15.0
+
+velocity:
+  missing: "#000000"
+  underflow: "#000066"
+  overflow: "#ff0000"
+  mode: gradient
+  value_min: -23.6
+  value_max: 23.6
+  colours:
+    - "#000066"
+    - "#111e78"
+    - "#20398a"
+    - "#2d509a"
+    - "#3b6bac"
+    - "#4a85be"
+    - "#59a0d0"
+    - "#66b7e0"
+    - "#75d2f2"
+    - "#ffffff"
+    - "#ffea00"
+    - "#ffcc00"
+    - "#ffb600"
+    - "#ff9900"
+    - "#ff7e00"
+    - "#ff6600"
+    - "#ff4900"
+    - "#ff3300"
+    - "#ff0000"
+  
+
+ZDR:
+  missing: "#000000"
+  underflow: "#000066"
+  overflow: "#ff0000"
+  mode: gradient
+  value_min: -6.0
+  value_max: 6.0
+  colours:
+    - "#000000"
+    - "#424242"
+    - "#c6c6c6"
+    - "#8477af"
+    - "#5f5389"
+    - "#0a1494"
+    - "#5a92cd"
+    - "#74c3b1"
+    - "#7ed53b"
+    - "#fefc6d"
+    - "#e59650"
+    - "#b9341a"
+    - "#6d1e0a"
+    - "#dd8abc"
+    - "#fefdfe"
+            
+  values:
+    - -6.000
+    - -3.000
+    - -0.001
+    - 0.000
+    - 0.249
+    - 0.250
+    - 0.999
+    - 1.000
+    - 1.999
+    - 2.000
+    - 2.999
+    - 3.000
+    - 4.999
+    - 5.000
+    - 6.000
+
+PID_3DRapic:
+  missing: "#222222"
+  underflow: "#000000"
+  overflow: "ffffff"
+  mode: thresholds
+  colours:
+    - "000000" #  0 none
+    - "87a389" #  1 cloud
+    - "005aa3" #  2 drizzle
+    - "005aa3" #  3 ltrain
+    - "005aa3" #  4 modrain
+    - "005aa3" #  5 hvyrain
+    - "fe0afe" #  6 hail
+    - "fe0afe" #  7 rain/hail
+    - "45b8ba" #  8 gr/smhail
+    - "45b8ba" #  9 gr/rain
+    - "8eccfe" # 10 drysnow
+    - "8eccfe" # 11 wetsnow
+    - "8eccfe" # 12 ice
+    - "8eccfe" # 13 ireg-ice
+    - "8eccfe" # 14 slw
+    - "87a389" # 15 insect
+    - "424242" # 16 2ndtrip
+    - "424242" # 17 clutter
+    - "424242" # 18 satsnr
+    - "424242" # 19 misc1
+    - "424242" # 20 misc2
+    - "ffffff" # invalid
+  values:    
+    - -0.5
+    - 0.5
+    - 1.5
+    - 2.5
+    - 3.5
+    - 4.5
+    - 5.5
+    - 6.5
+    - 7.5
+    - 8.5
+    - 9.5
+    - 10.5
+    - 11.5
+    - 12.5
+    - 13.5
+    - 14.5
+    - 15.5
+    - 16.5
+    - 17.5
+    - 18.5
+    - 19.5
+    - 20.5
+  
+
+PID_NCAR:
+  missing: "#222222"
+  underflow: "#000000"
+  overflow: "#ffffff"
+  mode: thresholds
+  colours:
+    - "#000000" #  0 none
+    - "#d1d0b8" #  1 cloud
+    - "#fed89a" #  2 drizzle
+    - "#fe9605" #  3 ltrain
+    - "#cd770f" #  4 modrain
+    - "#ff2f2f" #  5 hvyrain
+    - "#fbfb2f" #  6 hail
+    - "#1fde14" #  7 rain/hail
+    - "#1fa51f" #  8 gr/smhail
+    - "#0e8d0f" #  9 gr/rain
+    - "#4edfff" # 10 drysnow
+    - "#6394f0" # 11 wetsnow
+    - "#5f54c5" # 12 ice
+    - "#ffcbff" # 13 ireg-ice
+    - "#f89bb7" # 14 slw
+    - "#ffffff" # 15 insect
+    - "#a2a180" # 16 2ndtrip
+    - "#c51ea5" # 17 clutter
+    - "#ff0000" # 18 satsnr
+    - "#00ff00" # 19 misc1
+    - "#0000ff" # 20 misc2
+    - "#ffffff" # invalid
+  values: 
+    - -0.5
+    - 0.5
+    - 1.5
+    - 2.5
+    - 3.5
+    - 4.5
+    - 5.5
+    - 6.5
+    - 7.5
+    - 8.5
+    - 9.5
+    - 10.5
+    - 11.5
+    - 12.5
+    - 13.5
+    - 14.5
+    - 15.5
+    - 16.5
+    - 17.5
+    - 18.5
+    - 19.5
+    - 20.5
+  

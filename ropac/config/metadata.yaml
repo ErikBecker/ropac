@@ -1,0 +1,65 @@
+volume:
+  how:
+    RXlossH: None
+    RXlossV: None
+    TXlossH: None
+    TXlossV: None
+    TXtype: None
+    antgainH: None
+    antgainV: None
+    beamwidth: None
+    gasattn: None
+    poltype: None
+    radomelossH: None
+    radomelossV: None
+    scan_count: None
+    system: None
+    wavelength: None
+  what:
+    date: None,
+    object: None
+    source: None
+    time: None
+    version: None
+  where:
+    height: None
+    lat: None
+    lon: None
+
+dataset:
+  how:
+    CSR: None
+    LOG: None
+    NEZH: None
+    NEZV: None
+    NI: None
+    SQI: None
+    astart: None
+    highprf: None
+    lowprf: None
+    pulsewidth: None
+    radconstH: None
+    radconstV: None
+    rpm: None
+    scan_index: None
+  what:
+    endtime: None
+    enddate: None
+    product: None
+    startdate: None
+    starttime: None
+  where:
+    a1gate: None
+    elangle: None
+    nbins: None
+    nrays: None
+    rscale: None
+    rstart: None
+
+data:
+  what:
+    gain: None
+    nodata: None
+    offset: None
+    quantity: None
+    undetect: None

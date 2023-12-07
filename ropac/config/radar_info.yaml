@@ -1,0 +1,228 @@
+
+'SIN':               
+  name: Changi
+  type: gdrx
+  model: 1600S
+  id: 211
+  TXtype: Klystron
+  system: GEMAS
+  antgainH: 45.0
+  antgainV: 45.0
+  RXlossH: 1.0
+  RXlossV: 1.4
+  TXlossH: 1.0
+  TXlossV: 1.0
+  radomelossH: 0.2
+  gasattn: 0.016
+  
+'SEL':
+  name: Seletar
+  type: gdrx
+  model: 735CDP
+  id: 212
+  TXtype: Magnetron
+  system: GEMAS
+  antgainH: 45.2
+  antgainV: 45.2
+  RXlossH: 1.7
+  RXlossV: 1.73
+  TXlossH: 1.2
+  TXlossV: 1.19
+  radomelossH: 0.15
+  gasattn: 0.019
+
+'0056':
+  name: CWRP
+  type: Furuno
+  model: WR2100
+  id: 221
+  height: 45.47
+
+'0057':
+  name: CTO
+  type: Furuno
+  model: WR2100
+  id: 222
+  height: 59.4
+
+'0058':
+  name: WNRP
+  type: Furuno
+  model: WR2100
+  id: 223
+  height: 50.625
+
+
+'2007':
+  name: Tuas
+  type: Furuno
+  model: WR2120
+  id: 224
+  height: 44.0
+  manufacturer: Furuno
+  QPE_method: Kdp+Zh
+  QPE_correction_by_EL: OFF
+  wavelength: 3.18
+  range_resolution: 75 # in metre [m]
+  beamwidthH: 2.77 #[deg]
+  beamwidthV: 2.78 #[deg]
+  TXpowerH: 67.60 #[W]
+  TXpowerV: 67.60 #[W]
+  AntennaGainH: 33.8 #[dB]
+  AntennaGainV: 33.8 #[dB]
+  RXgainH: 54.30 #[dB]
+  RXgainV: 53.60 #[dB]
+  K_square: 0.93
+  ZDR_offset: 0.00 #[dB]
+  Rain_output_threshold: 0.00 #[mm/h]
+  Kdp_output_threshold_Kdp: 0.30 #[deg/km]
+  Kdp_output_threshold_Zh: 30.00 #[dBZ]
+  Zh-attenuation-coefficient_bl: 0.293
+  Zh-attenuation-coefficient_b2: 1.101
+  Zdr-attenuation-coefficient_dl: 0.0298
+  Zdr-attenuation-coefficient_d2: 1.293
+  Air-attenuation-coefficient: 0.010 #[dB/km]
+  Radiowave_extinction_threshold: 30.00 #[dBZ]
+  R-Zh-method-coefficient_B: 200.00
+  R-Zh-method-coefficient_beta: 1.600
+  R-Kdp-method-coefficient_a: 19.60
+  R-Kdp-method-coefficient_b: 0.815
+  R-Kdp-method-coefficient_c: 1.2
+  Invalidity_MP_noise_data: OFF
+  SQI: 0.0
+  SCR: ON  #Ship Clutter Rejection
+  SCR_EL_Threshold: 20.0
+  GCR: ON #Ground Clutter Rejection
+  GCR_EL_Threshold: 20.0
+  IR1: ON #Interference Rejection
+  IR2: ON #Interference Rejection
+  PRF_pattern: 1
+  Pulse: 7
+  IF_cable_length: 13 #[m]
+  Origin_EL_position_offset_correction: 0.0 #[deg]
+  AZ_offset_to_north: 200.00
+  Hits_mode: Auto
+  Hits_value: 10
+  Sweep_decimation_mode: "Auto"
+  Sweep_decimation_value: 14
+  Scan_mode: Volume Scan
+  Volume_scan_period: 2(30/[h]) #[min]
+  EL_transition_speed_mode: Auto
+  EL_transition_speed: 4.0 #[rpm]
+  AZ_rotation_speed: 10. #[rpm]
+
+'2009':
+  name: LSWW
+  type: Furuno
+  model: WR2120
+  id: 225
+  height: 23.45
+  manufacturer: Furuno
+  QPE_method: Kdp+Zh
+  QPE_correction_by_EL: OFF
+  wavelength: 3.18
+  range_resolution: 75 # in metre [m]
+  beamwidthH: 2.77 #[deg]
+  beamwidthV: 2.78 #[deg]
+  TXpowerH: 67.60 #[W]
+  TXpowerV: 67.60 #[W]
+  AntennaGainH: 33.8 #[dB]
+  AntennaGainV: 33.8 #[dB]
+  RXgainH: 54.30 #[dB]
+  RXgainV: 53.60 #[dB]
+  K_square: 0.93
+  ZDR_offset: 0.00 #[dB]
+  Rain_output_threshold: 0.00 #[mm/h]
+  Kdp_output_threshold_Kdp: 0.30 #[deg/km]
+  Kdp_output_threshold_Zh: 30.00 #[dBZ]
+  Zh-attenuation-coefficient_bl: 0.293
+  Zh-attenuation-coefficient_b2: 1.101
+  Zdr-attenuation-coefficient_dl: 0.0298
+  Zdr-attenuation-coefficient_d2: 1.293
+  Air-attenuation-coefficient: 0.010 #[dB/km]
+  Radiowave_extinction_threshold: 30.00 #[dBZ]
+  R-Zh-method-coefficient_B: 200.00
+  R-Zh-method-coefficient_beta: 1.600
+  R-Kdp-method-coefficient_a: 19.60
+  R-Kdp-method-coefficient_b: 0.815
+  R-Kdp-method-coefficient_c: 1.2
+  Invalidity_MP_noise_data: OFF
+  SQI: 0.0
+  SCR: ON  #Ship Clutter Rejection
+  SCR_EL_Threshold: 20.0
+  GCR: ON #Ground Clutter Rejection
+  GCR_EL_Threshold: 20.0
+  IR1: ON #Interference Rejection
+  IR2: ON #Interference Rejection
+  PRF_pattern: 1
+  Pulse: 7
+  IF_cable_length: 13 #[m]
+  Origin_EL_position_offset_correction: 0.0 #[deg]
+  AZ_offset_to_north: 200.00
+  Hits_mode: Auto
+  Hits_value: 10
+  Sweep_decimation_mode: "Auto"
+  Sweep_decimation_value: 14
+  Scan_mode: Volume Scan
+  Volume_scan_period: 2(30/[h]) #[min]
+  EL_transition_speed_mode: Auto
+  EL_transition_speed: 4.0 #[rpm]
+  AZ_rotation_speed: 10. #[rpm]
+
+'2014':
+  name: Autocity
+  type: Furuno
+  model: WR2120
+  id: 226
+  height: 72.07
+  manufacturer: Furuno
+  QPE_method: Kdp+Zh
+  QPE_correction_by_EL: OFF
+  wavelength: 3.18
+  range_resolution: 75 # in metre [m]
+  beamwidthH: 2.77 #[deg]
+  beamwidthV: 2.78 #[deg]
+  TXpowerH: 67.60 #[W]
+  TXpowerV: 67.60 #[W]
+  AntennaGainH: 33.8 #[dB]
+  AntennaGainV: 33.8 #[dB]
+  RXgainH: 54.30 #[dB]
+  RXgainV: 53.60 #[dB]
+  K_square: 0.93
+  ZDR_offset: 0.00 #[dB]
+  Rain_output_threshold: 0.00 #[mm/h]
+  Kdp_output_threshold_Kdp: 0.30 #[deg/km]
+  Kdp_output_threshold_Zh: 30.00 #[dBZ]
+  Zh-attenuation-coefficient_bl: 0.293
+  Zh-attenuation-coefficient_b2: 1.101
+  Zdr-attenuation-coefficient_dl: 0.0298
+  Zdr-attenuation-coefficient_d2: 1.293
+  Air-attenuation-coefficient: 0.010 #[dB/km]
+  Radiowave_extinction_threshold: 30.00 #[dBZ]
+  R-Zh-method-coefficient_B: 200.00
+  R-Zh-method-coefficient_beta: 1.600
+  R-Kdp-method-coefficient_a: 19.60
+  R-Kdp-method-coefficient_b: 0.815
+  R-Kdp-method-coefficient_c: 1.2
+  Invalidity_MP_noise_data: OFF
+  SQI: 0.0
+  SCR: ON  #Ship Clutter Rejection
+  SCR_EL_Threshold: 20.0
+  GCR: ON #Ground Clutter Rejection
+  GCR_EL_Threshold: 20.0
+  IR1: ON #Interference Rejection
+  IR2: ON #Interference Rejection
+  PRF_pattern: 1
+  Pulse: 7
+  IF_cable_length: 13 #[m]
+  Origin_EL_position_offset_correction: 0.0 #[deg]
+  AZ_offset_to_north: 200.00
+  Hits_mode: Auto
+  Hits_value: 10
+  Sweep_decimation_mode: "Auto"
+  Sweep_decimation_value: 14
+  Scan_mode: Volume Scan
+  Volume_scan_period: 2(30/[h]) #[min]
+  EL_transition_speed_mode: Auto
+  EL_transition_speed: 4.0 #[rpm]
+  AZ_rotation_speed: 10. #[rpm]

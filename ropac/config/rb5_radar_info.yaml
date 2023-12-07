@@ -1,0 +1,12 @@
+quantity_mapping:
+  dBZ: DBZH
+  dBuZ: TH
+  dBZv: DBZV
+  dBuZv: TV
+  V: VRADH
+  ZDR: ZDR
+  KDP: KDP
+  PhiDP: PHIDP 
+  uPhiDP: SPHIDP
+  RhoHV: RHOHV
+  W: WRADH

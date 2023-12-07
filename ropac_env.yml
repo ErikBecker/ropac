@@ -1,0 +1,15 @@
+name: ropac
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - numpy
+  - h5py
+  - wradlib
+  - matplotlib
+  - joblib
+  - natsort
+  - open-radar-data
+  
+  
