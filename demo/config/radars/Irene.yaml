@@ -1,0 +1,19 @@
+# Required for RB5
+name: Irene # locate in sensor info name, must match config file name
+id: 009 # your specific ID number
+pulsewidth: # Pulse width [μs] (short, medium and long pulses) need to find this from the radar operator
+    - NA
+    - NA
+    - NA
+
+# Optional: Can add any vairable of ODIM specific metadata as [name: value]
+var_name: your_value
+
+
+
+
+
+
+
+
+ 

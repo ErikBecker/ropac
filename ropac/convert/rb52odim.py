@@ -19,11 +19,12 @@ from datetime import datetime, timedelta
 import numpy as np
 
 def quantity_mapping(quantity):
-  rb5_to_odim = {'dBZ': 'DBZH', 'dBuZ': 'TH', 'dBZv': 'DBZV', 'dBuZv': 'TV', 'V': 'VRADH', 'ZDR': 'ZDR',
-                 'KDP': 'KDP','PhiDP': 'PHIDP' ,'uPhiDP': 'SPHIDP','RhoHV': 'RHOHV','W': 'WRADH'}
-  return rb5_to_odim[quantity]
-      
+    rb5_to_odim = {'dBZ': 'DBZH', 'dBuZ': 'TH', 'dBZv': 'DBZV', 'dBuZv': 'TV', 'V': 'VRADH', 'ZDR': 'ZDR',
+                    'KDP': 'KDP','PhiDP': 'PHIDP' ,'uPhiDP': 'SPHIDP','RhoHV': 'RHOHV','W': 'WRADH'}
+    return rb5_to_odim[quantity]
+
 def return_sensor_info(dataset,key):
+    
     var_list = [data[key] for _,data in dataset.items()]
     if not all(var == var_list[0] for var in var_list):
         raise ValueError(f"All variables {key} are not the same")
@@ -85,6 +86,10 @@ def get_radar_config(place):
 
 def get_rayinfo(rayinfo):
 
+    if isinstance(rayinfo, list) and len(rayinfo)==2:
+        my_dict = {index: value for index, value in enumerate(rayinfo)}
+        rayinfo = my_dict
+
     if 0 in rayinfo:
         if rayinfo[0]['@refid'] == 'startangle':
             angledepth = float(rayinfo[0]['@depth'])
@@ -92,6 +97,7 @@ def get_rayinfo(rayinfo):
             startangle = rayinfo[0]['data'] * (nrays/2**angledepth)
         else:
             startangle = None
+
     if 1 in rayinfo:
         if rayinfo[1]['@refid'] == 'stopangle':
             angledepth = float(rayinfo[1]['@depth'])
@@ -100,7 +106,7 @@ def get_rayinfo(rayinfo):
         else:
             stopangle = None
     
-    if 0 not in rayinfo:
+    if '@refid' in rayinfo:
         if rayinfo['@refid'] == 'startangle':
             angledepth = float(rayinfo['@depth'])
             nrays = float(rayinfo['@rays'])
@@ -173,7 +179,17 @@ def get_scan_times(timestamp,antspeed,sensor):
 def convert_rb5(rb5files: list):
     
     dataset = read_file_list(rb5files)
-    sensorinfo = return_sensor_info(dataset,'sensorinfo')
+    try:
+        sensorinfo = return_sensor_info(dataset,'sensorinfo')
+    except:
+        sensorinfo = return_sensor_info(dataset,'radarinfo')
+        sensorinfo['@name'] = sensorinfo.pop('name')
+        sensorinfo['@type'] = 'N/A'
+        sensorinfo['alt'] = sensorinfo.pop('@alt')
+        sensorinfo['lat'] = sensorinfo.pop('@lat')
+        sensorinfo['lon'] = sensorinfo.pop('@lon')
+
+
     sensorinfo['version'] = return_sensor_info(dataset,'@version')
     sensorinfo['type'] = return_sensor_info(dataset,'@type')
     sensorinfo['owner'] = return_sensor_info(dataset,'@owner') 
@@ -249,7 +265,7 @@ def convert_rb5(rb5files: list):
             elev[ie].how.LOG = float(get_elev_metadata(elev_meta,'sqi',ie)) 
             elev[ie].how.SQI = float(get_elev_metadata(elev_meta,'log',ie)) 
             elev[ie].how.NEZH = float(get_elev_metadata(elev_meta,'noise_power_dbz',ie))  
-            elev[ie].how.NEZV = float(get_elev_metadata(elev_meta,'noise_power_dbz_dpv',ie))
+            if 'noise_power_dbz_dpv' in elev_meta: elev[ie].how.NEZV = float(get_elev_metadata(elev_meta,'noise_power_dbz_dpv',ie))
             elev[ie].how.NI = calculate_NI(elev[ie].how.highprf, elev[ie].how.lowprf, how.wavelength)
             elev[ie].how.astart = set_astart(startangle)
             elev[ie].how.pulsewidth = radar_metadata['pulsewidth'][pw_index]
@@ -305,7 +321,8 @@ if __name__ == "__main__":
     import os
     from ropac import system_config as cfg
     
-    vol_file = os.path.join(cfg.path.ingest,'2013051000000600dBZ.vol')
+    # vol_file = os.path.join(cfg.path.ingest,'2013051000000600dBZ.vol')
+    vol_file = os.path.join(cfg.path.ingest,'2019100100000700dBZ.vol')
 
     print(vol_file)
     convert_rb5([vol_file])
